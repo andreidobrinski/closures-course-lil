@@ -66,14 +66,23 @@ const listWidget = (function() {
       document.querySelector('.results').classList.add('open');
     },
     updateUIWorking: function() {
-      for (var i = 0; i <= 9; i++) {
-        (function(j) {
+      // var count = [0,1,2,3,4,5,6,7,8,9];
+      // count.forEach(function(el) {
+      //   setTimeout(function() {
+      //     document.querySelector('.conditions').innerHTML = `
+      //         <p class="animation">00:00.${el}
+      //       `
+      //   }, 100 * el)
+      // })
+
+      for (let i = 0; i <= 9; i++) {
+        // (function(j) {
           setTimeout(function() {
             document.querySelector('.conditions').innerHTML = `
-              <p class="animation">00:00.${j}
+              <p class="animation">00:00.${i}
             `
-          }, 100 * j)
-        })(i); 
+          }, 100 * i)
+        // })(i); 
       }
     },
     updateUISuccess: function(response) {
